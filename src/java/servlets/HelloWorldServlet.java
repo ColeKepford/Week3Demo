@@ -33,6 +33,8 @@ public class HelloWorldServlet extends HttpServlet
         
         if(firstname == null || firstname.equals("") || lastname == null || lastname.equals(""))
         {
+            request.setAttribute("message", "Invalid Entry. Please enter both your first and last names");
+            
             request.setAttribute("firstname", firstname);
             request.setAttribute("lastname", lastname);
         
